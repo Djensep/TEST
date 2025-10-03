@@ -1,4 +1,4 @@
-import { IsInt, IsPositive, MinLength } from 'class-validator';
+import { IsInt, IsPositive } from 'class-validator';
 
 export class ReserveBookingDto {
   @IsInt()
@@ -6,6 +6,6 @@ export class ReserveBookingDto {
   event_id: number;
 
   @IsInt()
-  @MinLength(1)
+  @IsPositive()
   user_id: number;
 }
