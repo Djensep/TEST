@@ -13,5 +13,5 @@ export class EventEntity {
   total_seats: number;
 
   @OneToMany(() => BookingsEntity, (b) => b.event)
-  userId: BookingsEntity;
+  user_id: BookingsEntity;
 }

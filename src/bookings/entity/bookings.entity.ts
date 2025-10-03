@@ -18,6 +18,6 @@ export class BookingsEntity {
   @CreateDateColumn({ type: 'timestamp' })
   created_at: Date;
 
-  @ManyToOne(() => EventEntity, (e) => e.id, { onDelete: 'CASCADE' })
+  @ManyToOne(() => EventEntity, (e) => e.user_id, { onDelete: 'CASCADE' })
   event: EventEntity;
 }
